@@ -167,11 +167,11 @@ footer {
         font-size: 24px;
     }
     .icons {
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .title {
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .text {
         text-align: center;
@@ -187,3 +187,4 @@ footer {
         display: block;
     }
 }
+
