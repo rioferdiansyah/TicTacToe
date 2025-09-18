@@ -13,6 +13,7 @@ TicTacToe is a classic two-player game built using HTML, CSS, and JavaScript. Pl
 ## Features
 
 * Interactive 3x3 game board.
+* You have only 5% to win difficulty hard.
 * Players can alternately select empty squares.
 * Automatic detection of winners or draw results.
 * Reset button to start a new game.
