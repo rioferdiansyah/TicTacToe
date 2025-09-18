@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rio Ferdiansyah">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="https://static.vecteezy.com/system/resources/previews/015/304/829/original/tic-tac-toe-game-symbol-icon-in-line-style-design-isolated-on-white-background-editable-stroke-free-vector.jpg"
+        type="image/png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <img src="https://static.vecteezy.com/system/resources/previews/015/304/829/original/tic-tac-toe-game-symbol-icon-in-line-style-design-isolated-on-white-background-editable-stroke-free-vector.jpg"
+                alt="logo">
+            <h1>TicTacToe x GRANITE</h1>
+        </div>
+        <div class="scoreboard">
+            <span>Win: <span id="winCount">0</span></span>
+            <span>Lose: <span id="loseCount">0</span></span>
+            <span>Draw: <span id="drawCount">0</span></span>
+        </div>
+    </header>
+    <div class="content">
+        <div id="board"></div>
+        <p id="status"></p>
+        <button id="resetBtn" onclick="resetGame()">Reset Game</button>
+    </div>
+    <footer>
+        <div class="text">
+            <h3><a href="https://github.com/rioferdiansyah">@rioferdiansyah</a> Capstone Project</h3>
+            <p>Hacktiv8 X IBM Code Generations and Optimization</p>
+        </div>
+        <div class="icons">
+            <i class='bx bxl-html5 bx-sm'></i>
+            <i class='bx bxl-css3 bx-sm'></i>
+            <i class='bx bxl-javascript bx-sm'></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
