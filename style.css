@@ -23,6 +23,8 @@ a {
 
 body {
     height: 100vh;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,4 +171,5 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
+
 }
