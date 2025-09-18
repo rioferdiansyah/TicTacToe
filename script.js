@@ -6,7 +6,7 @@ let winCount = 0;
 let loseCount = 0;
 let drawCount = 0;
 
-const RANDOM_MOVE_CHANCE = 0.20; // 20% Random Moves
+const RANDOM_MOVE_CHANCE = 0.05; // 5% Random Moves
 
 function renderBoard() {
     const boardDiv = document.getElementById("board");
@@ -158,4 +158,5 @@ function resetGame() {
 
 // --- Initial setup ---
 renderBoard();
+
 setStatus("Your turn");
