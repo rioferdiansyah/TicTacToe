@@ -137,20 +137,6 @@ header {
     color: var(--white);
 }
 
-p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
 img {
     height: 40px;
     border-radius: 5px;
@@ -158,10 +144,13 @@ img {
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    text-align: start;
     gap: 3px;
+}
+
+.icons {
+    align-items: center;
+    flex-direction: row;
 }
 
 footer {
@@ -171,5 +160,30 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
+}
 
+@media screen and (max-width: 789px) {  
+    h1 {
+        font-size: 24px;
+    }
+    .icons {
+        margin-top: 20px;
+    }
+    .title {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .text {
+        text-align: center;
+    }
+    header {
+        display: block;
+    }
+    .scoreboard {
+        display: flex;
+        justify-content: center;
+    }
+    footer {
+        display: block;
+    }
 }
