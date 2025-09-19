@@ -7,7 +7,7 @@ TicTacToe is a classic two-player game built using HTML, CSS, and JavaScript. Pl
 ## Technologies Used
 
 * **HTML** – for structuring the game board, buttons, and UI elements.
-* **CSS** – for styling the layout, colors, and overall visual design.
+* **CSS** – for styling the layout, colors (colorhunt), and overall visual design (inkscape).
 * **JavaScript** – for the game logic: player turns, win detection, draw detection, and reset functionality.
 
 ## Features
@@ -36,6 +36,6 @@ TicTacToe is a classic two-player game built using HTML, CSS, and JavaScript. Pl
 
 ## AI Support Explanation
 
-The development of this project was assisted by AI (IBM Granite) only to speed up coding, debugging, and documentation.
+The development of this project was assisted by AI (IBM Granite) only to speed up coding, debugging, documentation, problem solving, optimization and debugging.
 
 ---
