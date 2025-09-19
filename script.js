@@ -7,6 +7,7 @@ let loseCount = 0;
 let drawCount = 0;
 
 const RANDOM_MOVE_CHANCE = 0.01; // 1% Random Moves
+let isPlayerTurn = true; // turn control
 
 function renderBoard() {
     const boardDiv = document.getElementById("board");
@@ -15,11 +16,18 @@ function renderBoard() {
         const cellDiv = document.createElement("div");
         cellDiv.className = "cell";
         cellDiv.textContent = cell;
-        cellDiv.onclick = cell !== "" ? undefined : () => playerMove(i);
-        cellDiv.style.cursor = gameOver ? "not-allowed" : (cell === "" ? "pointer" : "default");
+
+        // Only clickable if the cell is empty, it's the player's turn, and the game is not over
+        cellDiv.onclick = (cell === "" && isPlayerTurn && !gameOver) ? () => playerMove(i) : undefined;
+
+        cellDiv.style.cursor = gameOver
+            ? "not-allowed"
+            : (cell === "" && isPlayerTurn ? "pointer" : "default");
+
         if (winCombo.includes(i)) cellDiv.classList.add("winner");
         if (cell === "X") cellDiv.classList.add("x");
         if (cell === "O") cellDiv.classList.add("o");
+
         boardDiv.appendChild(cellDiv);
     });
 }
@@ -92,7 +100,7 @@ function bestMove(bd) {
 }
 
 function playerMove(i) {
-    if (board[i] !== "" || gameOver) return;
+    if (board[i] !== "" || gameOver || !isPlayerTurn) return;
 
     board[i] = "X";
     renderBoard();
@@ -103,6 +111,7 @@ function playerMove(i) {
         return;
     }
 
+    isPlayerTurn = false; // bot turn
     setStatus("Granite is thinking...");
     setTimeout(() => {
         botMove();
@@ -115,11 +124,13 @@ function botMove() {
 
     const result = checkWinner(board);
     winCombo = result.combo;
-    renderBoard();
 
     if (result.winner) {
+        renderBoard();
         endGame(result);
     } else {
+        isPlayerTurn = true; // player turn
+        renderBoard();
         setStatus("Your turn");
     }
 }
@@ -152,12 +163,11 @@ function resetGame() {
     board = ["", "", "", "", "", "", "", "", ""];
     gameOver = false;
     winCombo = [];
+    isPlayerTurn = true; // reset on player
     setStatus("Your turn");
     renderBoard();
 }
 
 // --- Initial setup ---
 renderBoard();
-
 setStatus("Your turn");
-
