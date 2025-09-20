@@ -36,6 +36,6 @@ TicTacToe is a classic two-player game built using HTML, CSS, and JavaScript. Pl
 
 ## AI Support Explanation
 
-The development of this project was assisted by AI (IBM Granite) only to speed up coding, debugging, documentation, problem solving, optimization and debugging.
+The development of this project was assisted by AI (IBM Granite) only to speed up coding, documentation, problem solving, optimization and debugging.
 
 ---
